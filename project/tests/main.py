@@ -28,6 +28,8 @@ async def start():
             'user_after':await User.create(requests, url, headers),
             'all_purchase': await Purchase.get_all(requests, url, headers),
             'all_gifts': await Gift.get_all(requests, url, headers),
+            'income_gift': await User.bot_income_gift(requests, url, headers),
+            'leaderboard': await User.leaderboard(requests, url, headers)
         }
     for key, value in res.items():
         try:

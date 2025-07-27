@@ -19,11 +19,11 @@ class Gift:
         return ans
     @classmethod
     async def user_giifts(cls, req:requests, url:str, headers:dict):
-        ans = req.get(f'{url}/user/gifts', headers=headers)
+        ans = req.get(f'{url}/gift/user_gifts', headers=headers)
         return ans
     @classmethod
     async def sell(cls, req:requests, url:str, headers:dict, gift_id:int):
-        ans = req.post(f'{url}/user/sell_gift', json=gift_id, headers=headers)
+        ans = req.post(f'{url}/gift/sell', json=gift_id, headers=headers)
         return ans
     @classmethod
     async def get_all(cls, req:requests, url:str, headers:dict):

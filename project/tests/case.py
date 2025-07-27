@@ -21,5 +21,5 @@ class Case:
 
     @classmethod
     async def spin(cls, req:requests, url:str, case_id:str, headers:dict):
-        ans = req.post(f'{url}/user/spin_case', json=case_id, headers=headers)
+        ans = req.post(f'{url}/case/spin', json=case_id, headers=headers)
         return ans
